@@ -4,10 +4,12 @@ filetype plugin on
 
 " Syntax and other basic stuff
 filetype on
-syntax on
 set number
 set hidden
 set history=100
+
+" Syntax
+syntax on
 
 " Indenting stuff
 filetype indent on
@@ -28,8 +30,8 @@ highlight CursorColumn cterm=bold ctermbg=none
 highlight CursorLine cterm=bold ctermbg=none
 
 " Change cursor row/column colour in insert mode
-autocmd InsertEnter * highlight CursorLine cterm=bold ctermbg=DarkGray
-autocmd InsertEnter * highlight CursorColumn cterm=bold ctermbg=DarkGray
+autocmd InsertEnter * highlight CursorLine cterm=bold ctermbg=DarkCyan
+autocmd InsertEnter * highlight CursorColumn cterm=bold ctermbg=DarkCyan
 autocmd InsertLeave * highlight CursorLine cterm=bold ctermbg=none
 autocmd InsertLeave * highlight CursorColumn cterm=bold ctermbg=none
 
