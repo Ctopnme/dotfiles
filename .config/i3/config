@@ -9,9 +9,12 @@ font pango:System San Francisco Display 10
 # Keybindings #
 ###############
 
-bindsym $mod+Return exec termite    # Terminal
-bindsym $mod+Shift+q kill           # Kill Focused Window
-bindsym $mod+d exec rofi -show run  # Program Launcher
+# Terminal
+bindsym $mod+Return exec termite
+# Kill Focused Window
+bindsym $mod+Shift+q kill
+# Program Launcher
+bindsym $mod+d exec rofi -show run
 
 # Move focus of windows
 bindsym $mod+Left focus left
@@ -25,30 +28,48 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Right move right
 bindsym $mod+Shift+Up move up
 
-bindsym $mod+h split h      # Horizontal split
-bindsym $mod+v split v      # Vertical split
+# Horizontal split
+bindsym $mod+h split h
+# Vertical split
+bindsym $mod+v split v
 
-bindsym $mod+f fullscreen toggle            # Toggle fullscreen
-bindsym $mod+s layout stacking              # Stacking layout
-bindsym $mod+t layout tabbed                # Tabbed layout
-bindsym $mod+Shift+space floating toggle    # Toggle float
-bindsym $mod+space focus mode_toggle        # Change focus from floating/tiling
-bindsym $mod+a focus parent                 # Focus parent
+# Toggle fullscreen
+bindsym $mod+f fullscreen toggle
+# Stacking layout
+bindsym $mod+s layout stacking
+# Tabbed layout
+bindsym $mod+t layout tabbed
+# Toggle float
+bindsym $mod+Shift+space floating toggle
+# Change focus from floating/tiling
+bindsym $mod+space focus mode_toggle
+# Focus parent
+bindsym $mod+a focus parent
 
-bindsym $mod+Shift+r restart                # Restart i3
-bindsym XF86Tools exec lock -p              # Lock
+# Restart i3
+bindsym $mod+Shift+r restart
+# Lock
+bindsym XF86Tools exec lock -p
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle         # Toggle mute
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%   # Decrease volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%   # Increase volume
+# Toggle mute
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+# Decrease volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+# Increase volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20     # Increase brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20   # Decrease brightness
+# Increase brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+# Decrease brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
-bindsym XF86Search exec playerctl play-pause    # Play/Pause
-bindsym XF86LaunchA exec playerctl previous     # Previous
-bindsym XF86Explorer exec playerctl next        # Next
+# Play/Pause
+bindsym XF86Search exec playerctl play-pause
+# Previous
+bindsym XF86LaunchA exec playerctl previous
+# Next
+bindsym XF86Explorer exec playerctl next
 
 # Workspace variables
 set $workspace1 "1 "
