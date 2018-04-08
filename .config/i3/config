@@ -49,7 +49,7 @@ bindsym $mod+a focus parent
 # Restart i3
 bindsym $mod+Shift+r restart
 # Lock
-bindsym XF86Tools exec lock -p
+bindsym XF86Tools exec ~/.scripts/lock.sh
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Toggle mute
@@ -176,3 +176,5 @@ exec_always xmodmap ~/.Xmodmap
 # Start up Programs
 exec spotify
 exec nm-applet
+exec --no-startup-id betterlockscreen -w
+exec --no-startup-id betterlockscreen --lock
