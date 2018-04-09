@@ -71,6 +71,12 @@ bindsym XF86LaunchA exec playerctl previous
 # Next
 bindsym XF86Explorer exec playerctl next
 
+# Multi-screen screenshots with scrot
+bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
+
+# OSX-like area selection screenshots
+bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
+
 # Workspace variables
 set $workspace1 "1 "
 set $workspace2 "2 "
@@ -174,7 +180,6 @@ exec compton -f
 exec_always xmodmap ~/.Xmodmap
 
 # Start up Programs
+exec --no-startup-id ~/.scripts/lock.sh a
 exec spotify
 exec nm-applet
-exec --no-startup-id betterlockscreen -w
-exec --no-startup-id betterlockscreen --lock
