@@ -30,12 +30,12 @@ Keysyms used can be found using [xev](https://www.archlinux.org/packages/extra/x
 | Key(s) | Action |
 | ------ | ------ |
 | Mod + Return | Opens termite |
+| Mod + Shift + Return | Opens termite in floating mode |
 | Mod + Shift + Q | Kill window |
 | Mod + D | Application launcher (Rofi) |
-| Mod + Arrows | Change window focus |
-| Mod + Shift + Arrows | Move focused window |
-| Mod + h | Horizontal split |
-| Mod + v | Vertical split |
+| Mod + h/j/k/l | Change window focus |
+| Mod + Shift + h/j/k/l | Move focused window |
+| Mod + v | Toggle container split orientation |
 | Mod + f | Fullscreen toggle |
 | Mod + s | Layout: stacking |
 | Mod + t | Layout: tabbed |
@@ -75,3 +75,7 @@ post to set up autologin.
 The screenshotting bindings I have were found
 [here](https://www.reddit.com/r/i3wm/comments/65vis5/screenshot_commands_from_my_i3_config/).
 Will probably looking into changing this soon.
+
+## Other resources
+[Launching terminal in floating mode](https://faq.i3wm.org/question/5866/two-keybindings-for-starting-terminal-normally-and-floating/index.html%3Fanswer=5867.html#post-id-5867)
+

@@ -11,27 +11,29 @@ font pango:System San Francisco Display 10
 
 # Terminal
 bindsym $mod+Return exec termite
+
+# Floating terminal binding
+bindsym $mod+Shift+Return exec termite --name=floating
+
 # Kill Focused Window
 bindsym $mod+Shift+q kill
 # Program Launcher
 bindsym $mod+d exec rofi -show run
 
 # Move focus of windows
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Right focus right
-bindsym $mod+Up focus up
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # Move focused windows
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Right move right
-bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
-# Horizontal split
-bindsym $mod+h split h
-# Vertical split
-bindsym $mod+v split v
+# Toggle split
+bindsym $mod+v split toggle
 
 # Toggle fullscreen
 bindsym $mod+f fullscreen toggle
@@ -172,6 +174,11 @@ bar {
     }                                                                            
 }  
 
+# Making termite with WM_NAME "floating" launch as a floating window
+for_window [class="Termite" instance="floating"] floating enable
+for_window [class="Termite" instance="floating"] resize set 900 250
+for_window [class="Termite" instance="floating"] move position 980 700
+
 # Default Workspaces
 for_window [class="Spotify"] move to workspace $workspace10
 for_window [class="Firefox"] move to workspace $workspace1
@@ -183,5 +190,4 @@ exec_always xmodmap ~/.Xmodmap
 
 # Start up Programs
 exec --no-startup-id ~/.scripts/lock.sh a
-exec spotify
-exec nm-applet
+
