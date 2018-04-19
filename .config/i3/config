@@ -190,4 +190,5 @@ exec_always xmodmap ~/.Xmodmap
 
 # Start up Programs
 exec --no-startup-id ~/.scripts/lock.sh a
-
+exec --no-startup-id nm-applet
+exec --no-startup-id spotify
