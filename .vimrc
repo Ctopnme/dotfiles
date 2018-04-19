@@ -23,16 +23,16 @@ set autoindent
 
 " Python indentation
 au BufNewFile,BufRead *.py
-            \ set tabstop=4
-            \ set softtabstop=4
-            \ set shiftwidth=4
-            \ set textwidth=79
-            \ set expandtab
-            \ set autoindent
-            \ set fileformat=unix
+            \ set tabstop=4 |
+            \ set softtabstop=4 |
+            \ set shiftwidth=4 |
+            \ set textwidth=79 |
+            \ set expandtab |
+            \ set autoindent |
+            \ set fileformat=unix |
 
 " Unnecessary Whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Red line at column 81
 set cc=81
