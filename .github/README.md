@@ -44,7 +44,7 @@ Keysyms used can be found using [xev](https://www.archlinux.org/packages/extra/x
 | Mod + Space | Toggle focus from floating/tiling |
 | Mod + a | Focus parent container |
 | Mod + Shift + R | Restart i3 |
-| XF86Tools | Lock the computer |
+| Mod + x | Lock the computer |
 | Mod + Shift + e | Exit i3 |
 | XF86AudioMute | Mute sound |
 | XF86AudioLowerVolume | Lower volume levels |
