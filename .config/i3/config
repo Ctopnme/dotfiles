@@ -160,8 +160,8 @@ hide_edge_borders both
                                                                                  
 # bar                                                                            
 bar {                                                                            
-  position bottom                                                                
-  tray_output primary                                                            
+  position top
+  tray_output primary
   font pango:Hack 10                                                             
   status_command i3blocks -c ~/.config/i3/i3blocks/i3blocks.conf                 
   colors {                                                                       
