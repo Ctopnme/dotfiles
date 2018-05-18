@@ -60,6 +60,12 @@ Keysyms used can be found using [xev](https://www.archlinux.org/packages/extra/x
 | Mod + Shift + \<number\> | Move focused window to workspace \<number\> |
 | Mod + r | Enter resize mode |
 
+## Finding Sink ID
+To find your sink ID run the command:
+```
+    $ pactl list sinks
+```
+
 ## Lock screen
 The lock script makes use of i3lock and ImageMagick. It was inspired by
 [BetterLockScreen](https://github.com/pavanjadhaw/betterlockscreen/blob/master/README.md)

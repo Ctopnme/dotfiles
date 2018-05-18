@@ -56,12 +56,14 @@ bindsym $mod+Shift+r restart
 bindsym $mod+x exec ~/.scripts/lock.sh
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# Sink ID Variable, instructions in read me.
+set $sinkID "14"
 # Toggle mute
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sinkID toggle
 # Decrease volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sinkID -5%
 # Increase volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sinkID +5%
 
 # Increase brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
@@ -184,9 +186,10 @@ for_window [class="Spotify"] move to workspace $workspace10
 for_window [class="Firefox"] move to workspace $workspace1
 
 # services
-exec feh --bg-fill ~/wallpaper.png
+exec_always feh --bg-fill ~/wallpaper.png
 exec compton -f
 exec_always xmodmap ~/.Xmodmap
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 # Start up Programs
 exec --no-startup-id ~/.scripts/lock.sh a
