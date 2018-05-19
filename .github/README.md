@@ -60,7 +60,8 @@ Keysyms used can be found using [xev](https://www.archlinux.org/packages/extra/x
 | Mod + Shift + \<number\> | Move focused window to workspace \<number\> |
 | Mod + r | Enter resize mode |
 
-## Finding Sink ID
+## Sound Bindings
+The sound bindings can stop working sometimes, most likely because the sink ID has changed.
 To find your sink ID run the command:
 ```
     $ pactl list sinks
