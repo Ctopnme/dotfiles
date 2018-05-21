@@ -51,9 +51,9 @@ Keysyms used can be found using [xev](https://www.archlinux.org/packages/extra/x
 | XF86AudioRaiseVolume | Raise volume levels |
 | XF86MonBrightnessDown | Decrease screen brightness |
 | XF86MonBrightnessUp | Increase screen brightness |
-| XF86Search | Play/pause media |
-| XF86LaunchA | "Previous" media |
-| XF86Explorer | "Next" media |
+| XF86Search or XF86AudioPlay | Play/pause media |
+| XF86LaunchA or XF86AudioPrev | "Previous" media |
+| XF86Explorer or XF86AudioNext | "Next" media |
 | PrtSc | Screen selection capture |
 | Shift + PrtSc | Entire screen capture |
 | Mod + \<number\> | Change to Workspace \<number\> |

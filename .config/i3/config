@@ -72,10 +72,13 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 # Play/Pause
 bindsym XF86Search exec playerctl play-pause
+bindsym XF86AudioPlay exec playerctl play-pause
 # Previous
 bindsym XF86LaunchA exec playerctl previous
+bindsym XF86AudioPrev exec playerctl previous
 # Next
 bindsym XF86Explorer exec playerctl next
+bindsym XF86AudioNext exec playerctl next
 
 # Multi-screen screenshots with scrot
 bindsym --release Shift+Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
